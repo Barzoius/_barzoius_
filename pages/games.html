@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Games Section</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    h2, h3 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      max-width: 600px;
+    }
+
+    /* Matches square layout */
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      gap: 20px;
+    }
+
+    .image-grid img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 600px) {
+      .image-grid img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section>
+  <h3>Action Games</h3>
+  <p>
+    Action games focus on fast-paced gameplay, reflexes, and combat mechanics. Players often engage in battles, missions, or challenges that require quick thinking.
+  </p>
+  <div class="image-grid">
+    <img src="https://via.placeholder.com/300x200" alt="Action 1">
+    <img src="https://via.placeholder.com/300x200" alt="Action 2">
+    <img src="https://via.placeholder.com/300x200" alt="Action 3">
+    <img src="https://via.placeholder.com/300x200" alt="Action 4">
+  </div>
+</section>
+
+<section>
+  <h3>Adventure Games</h3>
+  <p>
+    Adventure games emphasize exploration, storytelling, and puzzle-solving. Players progress through narrative-driven experiences and immersive environments.
+  </p>
+  <div class="image-grid">
+    <img src="https://via.placeholder.com/300x200" alt="Adventure 1">
+    <img src="https://via.placeholder.com/300x200" alt="Adventure 2">
+    <img src="https://via.placeholder.com/300x200" alt="Adventure 3">
+  </div>
+</section>
+
+<section>
+  <h3>Sports Games</h3>
+  <p>
+    Sports games simulate real-world sports such as football, basketball, and racing. They often include competitive multiplayer modes and realistic mechanics.
+  </p>
+  <div class="image-grid">
+    <img src="https://via.placeholder.com/300x200" alt="Sports 1">
+    <img src="https://via.placeholder.com/300x200" alt="Sports 2">
+    <img src="https://via.placeholder.com/300x200" alt="Sports 3">
+    <img src="https://via.placeholder.com/300x200" alt="Sports 4">
+    <img src="https://via.placeholder.com/300x200" alt="Sports 5">
+  </div>
+</section>
+
+</body>
+</html>

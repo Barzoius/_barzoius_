@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Squares Page</title>
+
+  <link rel="stylesheet" href="barziStyle.css" />
+</head>
+<body>
+  <h1>Moisel Rares</h1>
+
+  <div class="grid">
+    <div class="square" style="background-color:#983738;" onclick="openPage('#983738', 'pages/blog.html')">Blog</div>
+    <div class="square" style="background-color:#718bae;" onclick="openPage('#718bae', 'pages/projects.html')">Projects</div>
+    <div class="square" style="background-color:#57b17d;" onclick="openPage('#57b17d', 'pages/games.html')">Games</div>
+    <div class="square" style="background-color:#554a86;" onclick="openPage('#554a86', 'pages/theses.html')">Theses</div>
+    <div class="square" style="background-color:#ce954b;" onclick="openPage('#ce954b', 'pages/cv.html')">CV</div>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <button class="close-btn" onclick="closePage()">Close</button>
+    <div class="overlay-content" id="overlayContent"></div>
+  </div>
+
+  <script>
+    function openPage(color, pageFile) {
+      const overlay = document.getElementById('overlay');
+      const content = document.getElementById('overlayContent');
+
+      overlay.style.height = '100%';
+      overlay.style.backgroundColor = color;
+
+      fetch(pageFile)
+        .then(response => response.text())
+        .then(html => {
+          content.innerHTML = html;
+        })
+        .catch(() => {
+          content.innerHTML = "<p>Error loading content</p>";
+        });
+    }
+
+    function closePage() {
+      const overlay = document.getElementById('overlay');
+      overlay.style.height = '0';
+    }
+  </script>
+</body>
+</html>
