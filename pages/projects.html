@@ -1,69 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .page-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 32px;
+  }
+
+  /* layout */
+  .project-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  /* text */
+  .text {
+    flex: 1;
+    min-width: 260px;
+  }
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .desc {
+    font-size: 16px;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
+
+  /* media */
+  .media {
+    flex: 1;
+    min-width: 0;
+  }
+
+  /* single image */
+  .media img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* grid */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .image-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* hover */
+  .image-grid img:hover,
+  .media img:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease;
+  }
+
+  /* mobile */
+  @media (max-width: 768px) {
+    .project-section {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .image-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+
+</head>
+
+<body>
+
 <h2 class="page-title">Projects</h2>
 
-<div class="project-section row-normal">
+<!-- Project 1 -->
+
+<div class="project-section">
   <div class="text">
     <div class="title">GraphicsSandBox</div>
     <div class="desc">
-        A graphical engine developed using DirectX 11, focused on good architecture for enhanced
-        dynamic control, designed to render 3D graphics. Written in C++.
-
+      A graphical engine developed using DirectX 11, focused on good architecture for enhanced
+      dynamic control, designed to render 3D graphics. Written in C++.
     </div>
   </div>
 
   <div class="media">
-    <img src="pages/imgs/gfx1.png" alt="Project 1">
+    <img src="pages/imgs/gfx1.png" alt="GraphicsSandBox">
   </div>
 </div>
+
+<!-- Project 2 -->
 
 <div class="project-section row-reverse">
   <div class="text">
     <div class="title">Terrain generation</div>
     <div class="desc">
-            This project focuses on creating procedural terrain generation using multiple height map techniques. The goal is to produce diverse and realistic landscapes by combining different methods to simulate natural terrain features
+      This project focuses on creating procedural terrain generation using multiple height map techniques.
+      The goal is to produce diverse and realistic landscapes by combining different methods to simulate natural terrain features.
     </div>
   </div>
 
   <div class="media">
-    <img src="pages/imgs/terrain1.png" alt="Project 4">
-    <img src="pages/imgs/terrain2.png" alt="Project 4.2">
-    <img src="pages/imgs/terrain3.png" alt="Project 4.3">
+    <div class="image-grid">
+      <img src="pages/imgs/terrain1.png" alt="">
+      <img src="pages/imgs/terrain2.png" alt="">
+      <img src="pages/imgs/terrain3.png" alt="">
+    </div>
   </div>
 </div>
 
-<div class="project-section row-normal">
+<!-- Project 3 -->
+
+<div class="project-section">
   <div class="text">
     <div class="title">ToyGFX</div>
     <div class="desc">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-
+      Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+      In id cursus mi pretium tellus duis convallis.
     </div>
   </div>
 
   <div class="media">
-        <div class="image-grid">
-            <img src="pages/imgs/toy1.png" alt="Project 4">
-            <img src="pages/imgs/toy2.png" alt="Project 4.2">
-            <img src="pages/imgs/toy3.png" alt="Project 4.3">
-            <img src="pages/imgs/toy4.png" alt="Project 3">
-        </div>
+    <div class="image-grid">
+      <img src="pages/imgs/toy1.png" alt="">
+      <img src="pages/imgs/toy2.png" alt="">
+      <img src="pages/imgs/toy3.png" alt="">
+      <img src="pages/imgs/toy4.png" alt="">
+    </div>
   </div>
 </div>
+
+<!-- Project 4 -->
 
 <div class="project-section row-reverse">
   <div class="text">
     <div class="title">BezierPaths</div>
     <div class="desc">
-        This project uses Bezier curves o arbitrary order to generate a smooth and controlled path that an object can follow. The goal is to allow the object to move along this path with natural and precise motion, using the properties of Bezier curves to define the direction and shape of the trajectory at each point. 
-        A detailed expenation of the implementation can be found here.
+      This project uses Bezier curves of arbitrary order to generate a smooth and controlled path that an object can follow.
+      The goal is to allow the object to move along this path with natural and precise motion.
     </div>
   </div>
 
   <div class="media">
-    <img src="pages/imgs/bezierPic1.png" alt="Project 4">
-    <img src="pages/imgs/bezierPic2.png" alt="Project 4.2">
-    <img src="pages/imgs/bezierPic3.png" alt="Project 4.3">
-
-
-
+    <div class="image-grid">
+      <img src="pages/imgs/bezierPic1.png" alt="">
+      <img src="pages/imgs/bezierPic2.png" alt="">
+      <img src="pages/imgs/bezierPic3.png" alt="">
+    </div>
   </div>
 </div>
+
+</body>
+</html>
