@@ -1,2 +1,172 @@
-<h2>Theses</h2>
-<p>This is the theses section.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Theses Section</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+
+    .theses-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .theses-description {
+      margin-bottom: 25px;
+      color: #444;
+      font-size: 16px;
+    }
+
+    .thesis-entry {
+      margin-bottom: 40px;
+      padding: 20px;
+      border: 2px solid #ddd;   /* clean simple border */
+      border-radius: 10px;
+      background: transparent;   /* IMPORTANT: no filled card */
+    }
+
+    /* TEXT BLOCK */
+    .thesis-text {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    .thesis-gallery {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .wide-images {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .wide-images img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .square-image {
+      flex: 1;
+    }
+
+    .square-image img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .thesis-link {
+      font-size: 14px;
+    }
+
+    .thesis-link a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    .thesis-link a:hover {
+      text-decoration: underline;
+    }
+
+    .thesis-placeholder {
+      border: 2px dashed #ccc;
+      background: transparent;
+      color: #777;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 700px) {
+      .thesis-gallery {
+        flex-direction: column;
+      }
+
+      .wide-images img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="theses-section">
+
+  <h2>Theses</h2>
+
+  <br>
+  <br>
+
+  <!-- <p class="theses-description">
+    This is the theses section.
+  </p> -->
+
+  <!-- Bachelor Thesis -->
+  <div class="thesis-entry">
+
+    <!-- TEXT FIRST -->
+    <div class="thesis-text">
+      The thesis analyzes the construction of polygonal surfaces from implicit surfaces using
+      various surface extraction algorithms. The algorithms are compared in terms of geometric
+      accuracy and performance. The results demonstrate their applicability in the creation and
+      modeling of 3D objects, highlighting the advantages and limitations of each approach.
+    </div>
+
+    <!-- IMAGES -->
+    <div class="thesis-gallery">
+
+      <div class="wide-images">
+        <img src="pages/imgs/result3.png" alt="Thesis image 1">
+        <img src="pages/imgs/result1.png" alt="Thesis image 2">
+      </div>
+
+      <div class="square-image">
+        <img src="pages/imgs/result2.png" alt="Thesis image 3">
+      </div>
+
+    </div>
+
+    <!-- LINK -->
+    <p class="thesis-link">
+      This can be checked here:
+      <a href="https://drive.google.com/drive/folders/1ij-jC1RHkuW6q7QzH8zOwvpUkj4FaN3b?usp=sharing" target="_blank">
+        Bachelor Thesis Materials
+      </a>
+    </p>
+
+  </div>
+
+  <!-- FUTURE MASTER THESIS -->
+  <div class="thesis-entry thesis-placeholder">
+    Master thesis (to be added)
+  </div>
+
+    <div class="thesis-entry thesis-placeholder">
+    Doctorat  thesis (to far into the future)
+  </div>
+
+</section>
+
+</body>
+</html>
