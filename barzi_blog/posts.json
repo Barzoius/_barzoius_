@@ -1,0 +1,39 @@
+[
+    {
+        "title": "Bezier Paths",
+        "date": "2026-07-24",
+        "description": "Bezier curve generation and path interpolation.",
+        "category": "graphics",
+        "url": "categories/graphics/bezier.html"
+    },
+
+    {
+        "title": "Skip Graphs",
+        "date": "2026-07-24",
+        "description": "---",
+        "url": "categories/network/dns_tun.html"
+    },
+    
+
+    {
+        "title": "Single Value Decomposition",
+        "date": "2026-07-24",
+        "description": "Matrix factorization using singular value decomposition.",
+        "category": "math",
+        "url": "categories/math/svd.html"
+    },
+
+    {
+        "title": "Asio peer-to-peer comunication",
+        "date": "2026-07-24",
+        "description": "Peer-to-peer networking with asynchronous I/O.",
+        "url": "categories/network/peer_to_peer.html"
+    },
+
+    {
+        "title": "Edge detection",
+        "date": "2026-07-24",
+        "description": "Edge detection methods.",
+        "url": "categories/computer_vision/edge_1.html"
+    }
+]

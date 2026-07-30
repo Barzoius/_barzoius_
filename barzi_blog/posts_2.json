@@ -1,0 +1,41 @@
+[
+    {
+        "title": "Graphics",
+        "folder": true,
+        "open": true,
+        "posts": [
+            {
+                "title": "Bezier Curves",
+                "url": "posts/bezier.html"
+            },
+            {
+                "title": "Shaders",
+                "url": "posts/shaders.html"
+            }
+        ]
+    },
+
+    {
+        "title": "Network",
+        "folder": true,
+        "open": false,
+        "posts": [
+            {
+                "title": "TCP/IP Basics",
+                "url": "posts/tcp.html"
+            }
+        ]
+    },
+
+    {
+        "title": "Math",
+        "folder": true,
+        "open": false,
+        "posts": [
+            {
+                "title": "Linear Algebra",
+                "url": "posts/linear.html"
+            }
+        ]
+    }
+]

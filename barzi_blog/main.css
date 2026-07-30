@@ -1,0 +1,104 @@
+html,
+body {
+
+    overflow: auto;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+
+
+.posts-page {
+
+    width:min(900px,90%);
+
+    margin:auto;
+
+    padding-top:10px;
+}
+
+
+.posts-page h1 {
+
+    font-size:48px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+.post-list {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:50px;
+
+}
+
+
+
+.post {
+
+    display:grid;
+
+    grid-template-columns:150px 1fr;
+
+    gap:40px;
+
+}
+
+
+.post-content h2 a {
+    color: inherit;          /* use the normal text color */
+    text-decoration: none;   /* remove underline */
+}
+.post-content h2 a:hover {
+    text-decoration: dashed grey underline;
+}
+
+.post-date {
+
+    font-size:14px;
+
+    opacity:.6;
+
+    padding-top:8px;
+
+}
+
+
+
+.post-content h2 {
+
+    margin:0;
+
+    font-size:28px;
+
+}
+
+
+
+.post-content p {
+
+    margin-top:8px;
+
+    font-size:16px;
+
+    opacity:.65;
+
+    line-height:1.5;
+
+}

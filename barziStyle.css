@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'custom_font';
+    src: url('./retro.ttf') format('truetype');
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'custom_font', Arial, sans-serif;
   background-color: #e6dfc3;
 
   /* notebook grid */
@@ -117,6 +122,4 @@ h1 {
   flex: 1;
   text-align: left;
 }
-
-
 
