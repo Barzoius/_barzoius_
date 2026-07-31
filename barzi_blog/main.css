@@ -1,13 +1,13 @@
 html,
 body {
-
-    overflow: auto;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
 
     scrollbar-width: none;
-
     -ms-overflow-style: none;
-
 }
+
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
@@ -59,6 +59,18 @@ body::-webkit-scrollbar {
     gap:40px;
 
 }
+
+@media (max-width: 400px) {
+    .post {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .post-date {
+        padding-top: 0;
+    }
+}
+
 
 
 .post-content h2 a {
