@@ -1,89 +1,105 @@
-
-
+/* Hide scrollbar */
 .post-index {
-
     overflow-y: auto;
-
-    /* Firefox */
     scrollbar-width: none;
-
-    /* IE / old Edge */
     -ms-overflow-style: none;
-
 }
 
-/* Chrome, Edge, Safari */
 .post-index::-webkit-scrollbar {
-
     width: 0;
     height: 0;
-
 }
 
-.content
-{
-    min-height:80vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
+/* Main content */
+.content {
+    min-height: calc(100vh - 200px); /* Adjust if your navbar is taller */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
-
+/* Grid */
 .grid-container {
+    display: grid;
 
-    display:grid;
+    width: min(90vw, 900px);
+    aspect-ratio: 4 / 2.5;
 
-    width:min(80vw, 80vh);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
 
-    aspect-ratio:4.25 / 3;
-
-
-    grid-template-columns:repeat(5, 1fr);
-
-    grid-template-rows:repeat(3, 1fr);
-
-
-    gap:1em;
-
+    gap: clamp(0.4rem, 1vw, 1rem);
 
     grid-template-areas:
-
-    ". . box-1 . ."
-    "box-8 box-2 box-3 box-4 box-6"
-    ". box-7 . box-5 .";
-
-    
-
+        ". . box-1 . ."
+        "box-8 box-2 box-3 box-4 box-6"
+        ". box-7 . box-5 .";
 }
 
-
+/* Boxes */
 .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    border:1px solid black;
+    border: 1px solid black;
     border-radius: 8px;
 
     text-align: center;
-    justify-content:center;
-    align-items:center;
-    display:flex;
 
+    padding: 0.5rem;
+
+    font-size: clamp(0.65rem, 1.2vw, 1rem);
+
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
-.parallel
-{
-    font-size:0.7rem;
-
+/* Longer labels */
+.parallel,
+.comp-vision,
+.geom {
+    font-size: clamp(0.55rem, 1vw, 0.9rem);
 }
 
-.comp-vision
-{
-   font-size:0.9rem; 
-}
+/* Tablet */
+/* @media (max-width: 800px) {
+    .grid-container {
+        width: 95vw;
+        gap: 0.5rem;
+    }
+} */
 
-.geom
-{
-    font-size:0.9rem; 
+/* Phone */
+@media (max-width: 470px) {
+    .grid-container {
+        width: 100%;
+        aspect-ratio: auto;
+
+        grid-template-columns: 1.0fr;
+        grid-template-rows: repeat(8, auto);
+
+        grid-template-areas:
+            "box-1"
+            "box-2"
+            "box-3"
+            "box-4"
+            "box-5"
+            "box-6"
+            "box-7"
+            "box-8";
+    }
+
+    .box {
+        min-height: 60px;
+        font-size: 1rem;
+    }
+
+    .parallel,
+    .comp-vision,
+    .geom {
+        font-size: 1rem;
+    }
 }
