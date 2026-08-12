@@ -55,6 +55,9 @@
 
     overflow-wrap: break-word;
     word-break: break-word;
+
+        color: black;
+    text-decoration: none;
 }
 
 /* Longer labels */
@@ -64,42 +67,36 @@
     font-size: clamp(0.55rem, 1vw, 0.9rem);
 }
 
-/* Tablet */
-/* @media (max-width: 800px) {
-    .grid-container {
-        width: 95vw;
-        gap: 0.5rem;
-    }
-} */
 
 /* Phone */
 @media (max-width: 470px) {
     .grid-container {
-        width: 100%;
-        aspect-ratio: auto;
+        width: min(94vw, 420px);
+        aspect-ratio: 3 / 4;
 
-        grid-template-columns: 1.0fr;
-        grid-template-rows: repeat(8, auto);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        gap: clamp(0.4rem, 2vw, 0.7rem);
 
         grid-template-areas:
-            "box-1"
-            "box-2"
-            "box-3"
-            "box-4"
-            "box-5"
-            "box-6"
-            "box-7"
-            "box-8";
+            ". box-2 ."
+            "box-1    box-4 box-3"
+            ".     box-5 ."
+            "box-6 box-7 box-8";
     }
 
     .box {
-        min-height: 60px;
-        font-size: 1rem;
+        min-height: 0;
+        padding: clamp(0.3rem, 1.5vw, 0.6rem);
+
+        font-size: clamp(0.65rem, 3vw, 0.95rem);
     }
 
     .parallel,
     .comp-vision,
     .geom {
-        font-size: 1rem;
+        font-size: clamp(0.55rem, 2.7vw, 0.85rem);
     }
 }
+
