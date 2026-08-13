@@ -6,6 +6,8 @@ body {
 
     scrollbar-width: none;
     -ms-overflow-style: none;
+
+    color:#27187E
 }
 
 
@@ -78,7 +80,7 @@ body::-webkit-scrollbar {
     text-decoration: none;   /* remove underline */
 }
 .post-content h2 a:hover {
-    text-decoration: dashed grey underline;
+    text-decoration: dashed #615a8d underline;
 }
 
 .post-date {

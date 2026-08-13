@@ -1,3 +1,38 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.navbar {
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+    min-height: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.footer {
+    flex-shrink: 0;
+}
+
 /* Hide scrollbar */
 .post-index {
     overflow-y: auto;
@@ -10,21 +45,13 @@
     height: 0;
 }
 
-/* Main content */
-.content {
-    min-height: calc(100vh - 200px); /* Adjust if your navbar is taller */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    box-sizing: border-box;
-}
+
 
 /* Grid */
 .grid-container {
     display: grid;
 
-    width: min(90vw, 900px);
+    width: min(90vh, 900px);
     aspect-ratio: 4 / 2.5;
 
     grid-template-columns: repeat(5, 1fr);
@@ -36,6 +63,10 @@
         ". . box-1 . ."
         "box-8 box-2 box-3 box-4 box-6"
         ". box-7 . box-5 .";
+
+    max-height: 100%;
+    
+    box-sizing: border-box;
 }
 
 /* Boxes */
@@ -44,8 +75,8 @@
     justify-content: center;
     align-items: center;
 
-    border: 1px solid black;
-    border-radius: 8px;
+    border: 1.5px solid #27187E;
+    border-radius: 0px;
 
     text-align: center;
 
@@ -56,7 +87,7 @@
     overflow-wrap: break-word;
     word-break: break-word;
 
-        color: black;
+    color: #27187E;
     text-decoration: none;
 }
 
@@ -71,26 +102,44 @@
 /* Phone */
 @media (max-width: 470px) {
     .grid-container {
-        width: min(94vw, 420px);
-        aspect-ratio: 3 / 4;
+        width: auto;
+        height: auto;
 
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        /*
+         * 3 columns × 4 rows.
+         * The grid is allowed to shrink based on the
+         * actual space available inside .content.
+         */
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(4, minmax(0, 1fr));
 
-        gap: clamp(0.4rem, 2vw, 0.7rem);
+        gap: clamp(0.3rem, 1.5vw, 0.6rem);
 
         grid-template-areas:
             ". box-2 ."
-            "box-1    box-4 box-3"
-            ".     box-5 ."
+            "box-1 box-4 box-3"
+            ". box-5 ."
             "box-6 box-7 box-8";
+
+        /*
+         * This makes the grid choose a size that fits
+         * inside the content area.
+         */
+        max-width: 100%;
+        max-height: 100%;
+
+        aspect-ratio: 3 / 4;
     }
 
     .box {
+        min-width: 0;
         min-height: 0;
-        padding: clamp(0.3rem, 1.5vw, 0.6rem);
 
-        font-size: clamp(0.65rem, 3vw, 0.95rem);
+        aspect-ratio: 1 / 1;
+
+        /* padding: clamp(0.3rem, 1.5vw, 0.6rem);
+
+        font-size: clamp(0.65rem, 3vw, 0.95rem); */
     }
 
     .parallel,

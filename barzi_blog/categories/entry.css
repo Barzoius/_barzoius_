@@ -11,11 +11,11 @@
     align-items: center;
     gap: 18px;
 
-    border: 2px solid #444;
-    border-radius: 10px;
+    border: 1.5px solid #27187E;
+    border-radius: 0px;
     padding: 16px;
 
-    background: white;
+    background: #d5d5d4;
     transition: 0.2s;
 }
 
@@ -23,7 +23,7 @@
     /* transform: translateY(-2px); */
     /* box-shadow: 0 4px 12px rgba(0,0,0,0.15); */
     background-color: #d2cccc;
-    background: transparent;
+    /* background: transparent; */
 }
 
 .entry img {
@@ -47,6 +47,6 @@
 
 .entry-content p {
     margin-top: 8px;
-    color: #666;
+    color: #514592;
     line-height: 1.4;
 }

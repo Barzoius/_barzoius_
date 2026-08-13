@@ -11,19 +11,25 @@ html {
     scroll-behavior:smooth;
 }
 
+/* #F7F7FF
+#27187E */
+
 
 :root {
 
     /* The entire notebook uses this measurement */
     --cell: 10px;
 
-    --paper: white;
+        
+    --paper: #d5d5d4;
+    --nav_bar_color: ##d5d5d4;
 
     --grid-light: rgba(0,0,0,0.08);
     --grid-major: rgba(0,0,0,0.08);
 
 
-    --text: #222;
+    --text: #27187E ;
+    --text_2: #d5d5d4;
 
     /* --shadow:
         0 25px 60px rgba(0,0,0,.15); */
@@ -33,11 +39,11 @@ html {
 body {
   margin: 0;
   font-family: 'Geomini', Arial, sans-serif;
-  background-color: white;
+  background-color: var(--paper);
 
    background-image:
-    linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
+    linear-gradient(to right, var(--grid-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-light) 1px, transparent 1px);
 
   background-size: var(--cell) var(--cell);
 
@@ -65,16 +71,17 @@ body {
 
     box-sizing: border-box;
 
-    background-color: var(--paper);
+    background-color: var(--nav_bar_color);
 
     background-image:
-        linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
+        linear-gradient(to right, var(--paper) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--) 1px, transparent 1px);
 
     background-size: var(--cell) var(--cell);
 
-    border-bottom: 2px solid rgba(0,0,0,0.08);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-bottom: 1px solid #27187E;
+
+    /* box-shadow: 0 4px 12px rgba(0,0,0,0.08); */
 }
 
 .nav-title {
@@ -134,7 +141,9 @@ body {
     font-size: 14px;
     line-height: var(--cell);
 
-    border-top: 0px solid rgba(0,0,0,0.15);
+    border-top: 1px solid #27187E;
+
+    color: #27187E;
 
 }
 
@@ -147,4 +156,5 @@ body {
     white-space: pre;
     overflow-x: hidden;
     text-align: center;
+    color:#27187E
 }
