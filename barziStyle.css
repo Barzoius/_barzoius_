@@ -1,11 +1,15 @@
 @font-face {
     font-family: 'custom_font';
     src: url('./retro.ttf') format('truetype');
+
+  font-family: "SpaceGrotesk";
+  src: url("./fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
 }
+
 
 body {
   margin: 0;
-  font-family: 'custom_font', Arial, sans-serif;
+  font-family: 'SpaceGrotesk';
   background-color: #e6dfc3;
 
   /* notebook grid */
@@ -21,12 +25,12 @@ body {
 }
 
 h1 {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   text-align: center;
 }
 
 .grid {
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -43,12 +47,13 @@ h1 {
   color: #e6dfc3;
   font-weight: bold;
   font-size: 18px;
-  border-radius: 8px;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 
 .overlay {
+  
   position: fixed;
   top: 0;
   left: 0;
@@ -123,3 +128,58 @@ h1 {
   text-align: left;
 }
 
+ /* PERSONAL LINKS */
+
+
+
+.personal h1 {
+  margin: 0;
+}
+
+.personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding-top: 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-circle svg {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+.social-circle:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.linkedin {
+  background-color: #0A66C2;
+}
+
+.github {
+  background-color: #181717;
+}
+
+.gitlab {
+  background-color: #FC6D26;
+}
