@@ -130,56 +130,49 @@ h1 {
 
  /* PERSONAL LINKS */
 
-
-
+.personal
+ {
+   padding-top: 30px;
+ }
 .personal h1 {
+
   margin: 0;
 }
 
-.personal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  padding-top: 30px;
-}
 
-.social-links {
+.links {
+  margin-top: 10px;
   display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.social-circle {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.links a {
+  color: black;
   text-decoration: none;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.social-circle svg {
-  width: 20px;
-  height: 20px;
-  fill: white;
+.links a:hover {
+  text-decoration: underline;
 }
 
-.social-circle:hover {
-  transform: scale(1.1);
-  opacity: 0.85;
+
+
+
+
+
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 12px;
+    color: #5f5b4e;
 }
 
-.linkedin {
-  background-color: #0A66C2;
-}
-
-.github {
-  background-color: #181717;
-}
-
-.gitlab {
-  background-color: #FC6D26;
-}
